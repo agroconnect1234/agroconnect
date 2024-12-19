@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - AgroConnect</title>
+    <link rel="icon" href="imagenes/favicon.ico" type="image/x-icon">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: url('https://img.freepik.com/fotos-premium/campo-agricultura-uruguay_489856-739.jpg?w=740') no-repeat center center/cover;
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(7, 128, 27, 0.9);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            color: #1abc9c;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            color: #6cd807;
+            text-align: center;
+        }
+
+        ul.services-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        ul.services-list li {
+            margin: 1rem 0;
+        }
+
+        ul.services-list li a {
+            color:  #64c007;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        ul.services-list li a:hover {
+            color: #116d63;
+        }
+
+        .service-detail {
+            display: none; /* Ocultamos inicialmente las secciones */
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .service-detail h3 {
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+
+        .service-detail p {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Servicios</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#about">Sobre Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Nuestras Soluciones</h2>
+        <ul class="services-list">
+            <li><a href="#monitoreo" onclick="mostrarDetalle('monitoreo')">Monitoreo de cultivos en tiempo real</a></li>
+            <li><a href="#riego" onclick="mostrarDetalle('riego')">Gestión remota del riego</a></li>
+            <li><a href="#alertas" onclick="mostrarDetalle('alertas')">Alertas tempranas</a></li>
+            <li><a href="#optimizacion" onclick="mostrarDetalle('optimizacion')">Optimización de recursos</a></li>
+            <li><a href="#analisis" onclick="mostrarDetalle('analisis')">Análisis de datos</a></li>
+            <li><a href="#integracion" onclick="mostrarDetalle('integracion')">Integración con sistemas existentes</a></li>
+        </ul>
+
+        <!-- Detalle de cada servicio -->
+        <div class="service-detail" id="monitoreo">
+            <h3>Monitoreo de cultivos en tiempo real</h3>
+            <p>  Sensores colocados en los campos recopilan datos en tiempo real sobre variables críticas como humedad del suelo, temperatura, nivel de radiación solar, viento y nutrientes. Estos datos se envían a una plataforma centralizada donde los agricultores pueden
+                 visualizarlos fácilmente en su teléfono o computadora, lo que les permite tomar decisiones rápidas y precisas.</p>
+        </div>
+        <div class="service-detail" id="riego">
+            <h3>Gestión remota del riego</h3>
+            <p>  Con sistemas de riego automatizados conectados a los sensores, los agricultores pueden activar o desactivar el riego desde cualquier lugar, incluso programarlo según las necesidades específicas del cultivo. Esto no solo ahorra agua, 
+                sino que también asegura que las plantas reciban la cantidad adecuada para su crecimiento.</p>
+        </div>
+        <div class="service-detail" id="alertas">
+            <h3>Alertas tempranas</h3>
+            <p>  Mediante el análisis continuo de los datos recopilados, el sistema puede identificar patrones que indiquen problemas como riesgo de heladas, sequías, aparición de plagas o enfermedades. Las alertas se envían al agricultor mediante mensajes o notificaciones,
+                 dándole tiempo para implementar medidas preventivas. .</p>
+        </div>
+        <div class="service-detail" id="optimizacion">
+            <h3>Optimización de recursos</h3>
+            <p> La combinación de monitoreo y automatización ayuda a los agricultores a usar insumos como fertilizantes, agua y energía de manera más eficiente. Por ejemplo, solo se aplica fertilizante en áreas donde el nivel de nutrientes está por debajo del ideal,
+                 reduciendo costos y el impacto ambiental.</p>
+        </div>
+        <div class="service-detail" id="analisis">
+            <h3>Análisis de datos</h3>
+            <p> Toda la información recopilada se organiza en informes detallados y visualizaciones (gráficos, mapas de calor, etc.). Esto permite a los agricultores identificar tendencias a lo largo del tiempo, como temporadas más productivas o zonas con menor rendimiento,
+                 para planificar mejor sus futuras siembras.</p>
+        </div>
+        <div class="service-detail" id="integracion">
+            <h3>Integración con sistemas existentes</h3>
+            <p> La plataforma de tu pyme puede integrarse con maquinaria agrícola moderna, como tractores automatizados, o con software de gestión ya utilizado por los agricultores. 
+                Esto facilita la adopción del sistema sin necesidad de reemplazar equipos o tecnologías ya existentes.</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function mostrarDetalle(id) {
+            // Ocultamos todas las secciones
+            const detalles = document.querySelectorAll('.service-detail');
+            detalles.forEach(detalle => detalle.style.display = 'none');
+
+            // Mostramos la sección correspondiente
+            const elemento = document.getElementById(id);
+            if (elemento) {
+                elemento.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
